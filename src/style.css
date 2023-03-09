@@ -1,0 +1,121 @@
+h4 {
+  font-weight: 400;
+}
+
+li {
+  font-size: 16px;
+  font-weight: 100;
+  height: 20px;
+  line-height: 1;
+  list-style: none;
+}
+
+.container {
+  border-width: 10px;
+  max-width: 600px;
+}
+
+.row {
+  margin-right: -75px;
+  align-items: centre;
+}
+
+.weather-app {
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.sunset {
+  margin-bottom: 0px;
+}
+
+.search-form {
+  width: 82%;
+  padding: 20px;
+  border-radius: 20px;
+  border-width: 1px;
+  border-color: rgb(158, 152, 152);
+  margin-bottom: 0px;
+}
+
+.search-bar {
+  padding: 8px;
+  border-radius: 8px;
+  border-width: 1px;
+  width: 230px;
+}
+
+.search-button {
+  padding: 7px 12px;
+  border-radius: 8px;
+  border-width: 0px;
+  background-color: #0dcaf0;
+  border-color: #0dcaf0;
+}
+
+.location-icon {
+  font-size: 20px;
+}
+
+.temperature {
+  color: rgb(33, 33, 33);
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.units {
+  position: relative;
+  top: -34px;
+  text-decoration: none;
+}
+
+.conditions {
+  text-align: center;
+  position: absolute;
+  top: 280px;
+  left: 30px;
+}
+
+.menu-bar {
+  font-size: 35px;
+  position: relative;
+  top: 3px;
+  left: 205px;
+}
+
+.nav-icon {
+  font-size: 20px;
+  position: relative;
+  top: 25px;
+  left: 442px;
+}
+
+.cloud-icon {
+  font-size: 55px;
+  color: rgb(140, 131, 131);
+}
+
+.image-positioning {
+  position: absolute;
+  display: block;
+  width: 355px;
+  float: left;
+  right: 0;
+  bottom: 190px;
+  left: 190px;
+}
+
+.rain-cloud-icon {
+  color: rgb(158, 152, 152);
+  font-size: 30px;
+}
+
+.sun-cloud-icon {
+  color-scheme: light;
+  color: rgb(251, 251, 137);
+  font-size: 30px;
+}
