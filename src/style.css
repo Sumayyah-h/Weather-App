@@ -1,3 +1,7 @@
+h1 {
+  line-height: 28px;
+}
+
 h4 {
   font-weight: 400;
 }
@@ -10,6 +14,14 @@ li {
   list-style: none;
 }
 
+.weather-app {
+  border: 1px solid #dadde1;
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
 .container {
   border-width: 10px;
   max-width: 600px;
@@ -20,20 +32,13 @@ li {
   align-items: centre;
 }
 
-.weather-app {
-  border: 1px solid #dadde1;
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 10px;
-  max-width: 600px;
-}
 
 .sunset {
   margin-bottom: 0px;
 }
 
 .search-form {
-  width: 82%;
+  width: 89%;
   padding: 20px;
   border-radius: 20px;
   border-width: 1px;
@@ -80,12 +85,6 @@ li {
   left: 30px;
 }
 
-.menu-bar {
-  font-size: 35px;
-  position: relative;
-  top: 3px;
-  left: 205px;
-}
 
 .nav-icon {
   font-size: 20px;
@@ -97,16 +96,6 @@ li {
 .cloud-icon {
   font-size: 55px;
   color: rgb(140, 131, 131);
-}
-
-.image-positioning {
-  position: absolute;
-  display: block;
-  width: 355px;
-  float: left;
-  right: 0;
-  bottom: 190px;
-  left: 190px;
 }
 
 .rain-cloud-icon {
