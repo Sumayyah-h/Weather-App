@@ -19,6 +19,7 @@
 
   <div class="container">
     <div class="weather-app">
+      <div class="weather-app-wrapper">
       <form class="search-form" id="search-form">
       <div class="row">
         <div class="col-6">
@@ -40,84 +41,81 @@
          </button>
        </div>
       </div>
-    <br>
-    <br>
+      <br>
+      <br>
     
-    <h1 id="city">
+      <h1 id="city">
       <i class="fa-solid fa-location-dot location-icon"></i> Keighley
     </h1> 
     
     <h3 id="date"></h3>
     <div class="row">
       <div class="col-6">
-        <h2>
-         <div class="float-left">
-          <span class="temperature" id="temperature">8</span>
-          <span class="units">
-            <a href="#" id="celsius-link">℃</a> |
-            <a href="#" id="fahrenheit-link">°F</a>
-          </span>
-         </div>
-        </h2>
+        <ul>
+          <li>Humidity: <span id="humidity"></span>%</li>
+          <li>Wind: <span id="wind"></span> km/h</li>
+        </li>
+      </ul>  
+        <ul>
+          <li>Highest: 11<span id="highest" id="celsius-link"></span>°C</li>
+          <li>Lowest: 5<span id="lowest" id="celsius-link"></span>°C</li>
+          <li>Feels like: 6<span id="feels-like"></span>°C</li>
+        </ul>
+        <ul class="sunset">
+          Sunset: 16:54
+        </ul>
+        <ul class="sunrise">
+          Sunrise: 07:47
+        </ul>
       </div>
-     <div class="col-6">
-       <ul>
-         <li>Humidity: <span id="humidity"></span>%</li>
-         <li>Wind: <span id="wind"></span> km/h</li>
-          <li> <span class="conditions"></span>
-        Rainy conditions expected around 17:00
-      </li>
-    </div>
-       </ul>
-     </div>
- 
-    <i class="fa-solid fa-cloud cloud-icon"></i>
-
-    <h4 id="description">
-      Cloudy
-    </h4>
-
-    <div class="sunset">
-    <p>
-      Sunset: 16:54
-    </p>
-    </div>
-    <div class="sunrise">
-    <p>
-      Sunrise: 07:47
-    </p>
+        <div class="col-6">
+          <i class="fa-solid fa-cloud cloud-icon"></i>
+          <h2>
+            <span class="temperature" id="temperature">8</span>
+            <span class="units">
+              <a href="#" id="celsius-link">℃</a> |
+              <a href="#" id="fahrenheit-link">°F</a>
+            </span>
+          </h2>
+          <h4 id="description">
+            Cloudy
+          </h4>
+          <br>
+        </div>
+      </div>
+      <li>Rainy conditions expected around 17:00 <span class="conditions"></span></li>
+      </div>
     </div>
 
-   <hr>
+    <br>
 
-    <div class="container text-center">
-      <div class="row align-items-center">
+    <div class="container-2">
+      <div class="forcast-display">
+      <div class="row data">
         <div class="col">
           Sat
         </div>
-        <div class="col-2">
+        <div class="col">
            Sun
         </div>
-        <div class="col-2">
+        <div class="col">
            Mon
         </div>
-        <div class="col-2">
+        <div class="col">
           Tue
         </div>
-        <div class="col-2">
+        <div class="col">
            Wed
         </div>
-        <div class="col-2">
+        <div class="col">
            Thur
         </div>
-        <div class="col-2">
+        <div class="col">
            Fri
         </div>
       </div>
-    </div>
-
-    <div class="container text-center">
-      <div class="row align-items-center">
+      
+      <div class="row data">
         <div class="col">
           <i class="fa-solid fa-cloud-rain rain-cloud-icon"></i>
         </div>
@@ -140,10 +138,8 @@
           <i class="fa-solid fa-cloud-rain rain-cloud-icon"></i>
         </div>
       </div>
-    </div>
-
-    <div class="container text-center">
-      <div class="row align-items-center">
+      
+      <div class="row data">
         <div class="col">
           3° 8°
         </div>
@@ -166,14 +162,15 @@
           -1° 6°
         </div>
       </div>
-    </div>
 
       </div>
-  </div>
-  <p>
-    <a href="https://github.com/Sumayyah-h/Weather-App"> Open-source code </a>
-    by Sumayyah Hussain
-    </p>
+    </div>
+
+    <p>
+      <a href="https://github.com/Sumayyah-h/Weather-App" target="_blank"> Open-source code </a>
+      by Sumayyah Hussain
+      </p>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>
