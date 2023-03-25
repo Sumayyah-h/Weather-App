@@ -25,30 +25,40 @@ function formatDate(date) {
 }
 
 function displayWeatherCondition(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
+  document.querySelector("#city").innerHTML = response.data.city;
   document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
+    response.data.temperature.current
   );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML =
+    response.data.temperature.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector("#description").innerHTML =
-    response.data.weather[0].main;
+    response.data.condition.description;
+  document.querySelector("#highest").innerHTML = Math.round(
+    response.data.daily.temperature.maximum
+  );
+  document.querySelector("#lowest").innerHTML = Math.round(
+    response.data.daily.temperature.minimum
+  );
+  document.querySelector("#feels-like").innerHTML = Math.round(
+    response.data.temperature.feels_like
+  );
+  document.querySelector("#sunset").innerHTML = response.data.main.sunset;
 }
 
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
-  let apiKey = "be60748992fab0f5da8162563fb21245";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiKey = "7157tdo40a4aac83b0ebaf1beb1f3181";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function searchLocation(position) {
   let apiKey = "be60748992fab0f5da8162563fb21245";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
-
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${position.coords.latitude}&lon=${position.coords.longitude}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 }
 
@@ -84,3 +94,9 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+
+let highestElement = document.querySelector("#highest");
+
+let lowestElement = document.querySelector("#lowest");
+
+let feelslikeElement = document.querySelector("#feels-like");
