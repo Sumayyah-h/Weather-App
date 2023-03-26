@@ -3,11 +3,12 @@ h1 {
 }
 
 h2 {
-margin-top: 12px;
+  margin-top: 12px;
 }
 
 h4 {
   font-weight: 400;
+  text-transform: capitalize;
 }
 
 ul {
@@ -27,9 +28,9 @@ a {
 }
 
 .weather-app-wrapper {
-max-width: 600px;
-margin: 30px auto;
-margin: 0;
+  max-width: 600px;
+  margin: 30px auto;
+  margin: 0;
 }
 
 .weather-app {
@@ -112,9 +113,10 @@ margin: 0;
 }
 
 .cloud-icon {
-  font-size: 100px;
+  width: 100px;
+  height: auto;
   color: rgb(140, 131, 131);
-  line-height: 0;
+  line-height: -10;
 }
 
 .forcast-display {

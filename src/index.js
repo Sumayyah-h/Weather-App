@@ -26,6 +26,7 @@ function formatDate(date) {
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.city;
+  celsiusTemperature = response.data.temperature.current;
   document.querySelector("#temperature").innerHTML =
     Math.round(celsiusTemperature);
   document.querySelector("#humidity").innerHTML =
@@ -35,19 +36,23 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
+
   document.querySelector("#highest").innerHTML = Math.round(
-    response.data.daily.temperature.maximum
+    response.data.temperature.maximum
   );
   document.querySelector("#lowest").innerHTML = Math.round(
-    response.data.daily.temperature.minimum
+    response.data.temperature.minimum
   );
   document.querySelector("#feels-like").innerHTML = Math.round(
     response.data.temperature.feels_like
   );
-  document.querySelector("#sunset").innerHTML = response.data.main.sunset;
-}
+  //document.querySelector("#sunset").innerHTML = response.data.main.sunset;
 
-celsiusTemperature = response.data.temperature.current;
+  iconElement.setAttribute(
+    "src",
+    `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+  );
+}
 
 function searchCity(event) {
   event.preventDefault();
@@ -108,3 +113,5 @@ let highestElement = document.querySelector("#highest");
 let lowestElement = document.querySelector("#lowest");
 
 let feelslikeElement = document.querySelector("#feels-like");
+
+let iconElement = document.querySelector("#icon");
