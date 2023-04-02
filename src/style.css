@@ -133,6 +133,11 @@ a {
   border-radius: 10px;
   background-color: #E8FFFF;
   opacity: 0.85;
+  text-align: center;
+}
+
+.forcast-display-date {
+  font-size: 16px;
 }
 
 .data {
