@@ -24,6 +24,59 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  forecastElement.innerHTML = `<div class="row">`;
+  forecastHTML =
+    forecastHTML +
+    `  
+    <div class="col-2">
+      <div class="forecast-display-date">
+        Sat
+      </div>
+      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" 
+      alt="" 
+      width="70px">
+      <div class="forecast-display-temperature">
+      <span class="forecast-display-temperature-min">
+      3° 
+      </span>
+      <span class="forecast-display-temperature-max">
+      <strong>
+      8°
+      </strong>
+      </span>
+      </div>
+    </div>
+  `;
+
+  forecastHTML = 
+    forecastHTML + 
+    `  
+    <div class="col-2">
+      <div class="forecast-display-date">
+        Sat
+      </div>
+      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" 
+      alt="" 
+      width="70px">
+      <div class="forecast-display-temperature">
+      <span class="forecast-display-temperature-min">
+      3° 
+      </span>
+      <span class="forecast-display-temperature-max">
+      <strong>
+      8°
+      </strong>
+      </span>
+      </div>
+    </div>
+  `;
+  forecastHTML = forecastHTML + `</div>`
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.city;
   celsiusTemperature = response.data.temperature.current;
@@ -115,3 +168,5 @@ let lowestElement = document.querySelector("#lowest");
 let feelslikeElement = document.querySelector("#feels-like");
 
 let iconElement = document.querySelector("#icon");
+
+displayForecast();
