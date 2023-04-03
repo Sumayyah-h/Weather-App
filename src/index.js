@@ -50,29 +50,6 @@ function displayForecast() {
       </div>
     </div>
   `;
-
-  forecastHTML = 
-    forecastHTML + 
-    `  
-    <div class="col-2">
-      <div class="forecast-display-date">
-        Sat
-      </div>
-      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" 
-      alt="" 
-      width="70px">
-      <div class="forecast-display-temperature">
-      <span class="forecast-display-temperature-min">
-      3° 
-      </span>
-      <span class="forecast-display-temperature-max">
-      <strong>
-      8°
-      </strong>
-      </span>
-      </div>
-    </div>
-  `;
   forecastHTML = forecastHTML + `</div>`
   forecastElement.innerHTML = forecastHTML;
 }
