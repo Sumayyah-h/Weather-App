@@ -24,16 +24,20 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data);
   let forecastElement = document.querySelector("#forecast");
 
-  forecastElement.innerHTML = `<div class="row">`;
-  forecastHTML =
-    forecastHTML +
-    `  
+  let days = ["Sat", "Sun", "Mon", "Tue"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `  
     <div class="col-2">
       <div class="forecast-display-date">
-        Sat
+        ${day}
       </div>
       <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" 
       alt="" 
@@ -50,8 +54,16 @@ function displayForecast() {
       </div>
     </div>
   `;
-  forecastHTML = forecastHTML + `</div>`
+  });
+  forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "7157tdo40a4aac83b0ebaf1beb1f3181";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeatherCondition(response) {
@@ -82,6 +94,8 @@ function displayWeatherCondition(response) {
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
+
+  getForecast(response.data.coordinates);
 }
 
 function searchCity(event) {
@@ -93,9 +107,9 @@ function searchCity(event) {
 }
 
 function searchLocation(position) {
-  let apiKey = "fbef01f4et1b02o0d25c27210a43ef3f";
+  let apiKey = "7157tdo40a4aac83b0ebaf1beb1f3181";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?lat=${position.coords.latitude}&lon=${position.coords.longitude}&key=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeatherCondition);;
+  axios.get(apiUrl).then(displayWeatherCondition);
 }
 
 function getCurrentLocation(event) {
@@ -145,5 +159,3 @@ let lowestElement = document.querySelector("#lowest");
 let feelslikeElement = document.querySelector("#feels-like");
 
 let iconElement = document.querySelector("#icon");
-
-displayForecast();
