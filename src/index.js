@@ -25,30 +25,29 @@ function formatDate(date) {
 }
 
 function displayForecast(response) {
-  console.log(response.data);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Sat", "Sun", "Mon", "Tue"];
 
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `  
     <div class="col-2">
       <div class="forecast-display-date">
-        ${day}
+        ${forecastDay.day}
       </div>
-      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" 
+      <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${forecastDay.condition.icon}.png" 
       alt="" 
       width="70px">
       <div class="forecast-display-temperature">
       <span class="forecast-display-temperature-min">
-      3° 
+      ${forecastDay.temperature.minimum} 
       </span>
       <span class="forecast-display-temperature-max">
       <strong>
-      8°
+      ${forecastDay.temperature.maximum} 
       </strong>
       </span>
       </div>
@@ -101,6 +100,10 @@ function displayWeatherCondition(response) {
 function searchCity(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
+  search(city);
+}
+
+function search(city) {
   let apiKey = "7157tdo40a4aac83b0ebaf1beb1f3181";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
@@ -159,3 +162,5 @@ let lowestElement = document.querySelector("#lowest");
 let feelslikeElement = document.querySelector("#feels-like");
 
 let iconElement = document.querySelector("#icon");
+
+search("Keighley");
