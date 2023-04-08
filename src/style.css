@@ -28,7 +28,7 @@ a {
 }
 
 .container-background {
-  object-fit: fill;    
+  object-fit: fill;
 }
 
 .weather-app-wrapper {
@@ -41,7 +41,7 @@ a {
   border: 1px solid #dadde1;
   padding: 20px;
   border-radius: 10px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.873);
   opacity: 0.85;
 }
 
@@ -53,6 +53,10 @@ a {
 .row {
   margin-right: -75px;
   align-items: centre;
+}
+
+.col-2 {
+  padding: 0px;
 }
 
 .sunset {
@@ -131,9 +135,10 @@ a {
   max-width: 600px;
   border: 1px solid #dadde1;
   padding: 20px 0;
+  padding-left: 7px;
+  padding-right: 70px;
   border-radius: 10px;
-  background-color: #E8FFFF;
-  opacity: 0.85;
+  background-color: rgba(255, 255, 255, 0.873);
   text-align: center;
 }
 
