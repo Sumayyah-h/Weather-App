@@ -16,7 +16,7 @@ ul {
 }
 
 li {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 100;
   height: 20px;
   line-height: 1;
@@ -28,7 +28,7 @@ a {
 }
 
 .container-background {
-  object-fit: fill;
+  height: max-content;
 }
 
 .weather-app-wrapper {
@@ -43,6 +43,7 @@ a {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.873);
   opacity: 0.85;
+  margin-top: 30px;
 }
 
 .container {
@@ -123,11 +124,11 @@ a {
   left: 442px;
 }
 
-.cloud-icon {
-  width: 100px;
-  height: auto;
-  color: rgb(140, 131, 131);
+.weather-icon {
+  width: 180px;
+  height: 160px;
   line-height: -10;
+  block-size: auto;
 }
 
 .forecast-display {

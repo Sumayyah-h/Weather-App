@@ -94,18 +94,9 @@ function displayWeatherCondition(response) {
   );
   document.querySelector("#description").innerHTML =
     response.data.condition.description;
-
-  document.querySelector("#highest").innerHTML = Math.round(
-    response.data.temperature.maximum
-  );
-  document.querySelector("#lowest").innerHTML = Math.round(
-    response.data.temperature.minimum
-  );
   document.querySelector("#feels-like").innerHTML = Math.round(
     response.data.temperature.feels_like
   );
-  //document.querySelector("#sunset").innerHTML = response.data.main.sunset;
-
   iconElement.setAttribute(
     "src",
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
@@ -171,10 +162,6 @@ celsiusLink.addEventListener("click", convertToCelsius);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-let highestElement = document.querySelector("#highest");
-
-let lowestElement = document.querySelector("#lowest");
 
 let feelslikeElement = document.querySelector("#feels-like");
 

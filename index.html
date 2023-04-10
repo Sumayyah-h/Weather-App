@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="src/style.css">
     <title>Weather App</title>
   </head>
-  <body class="container-background" style="background: url(images/Scattered-clouds-Background.jpg);">
+  <body class="container-background" style="background: url(images/Cloudy-Background.jpg);">
 
   <div class="container">
     <div class="weather-app">
@@ -44,32 +44,32 @@
       <br>
       <br>
     
-      <h1 id="city">
-      <i class="fa-solid fa-location-dot location-icon"></i> Keighley
-    </h1> 
+      <div class="row">
+        <div class="col-6">
+          <ul>
+            <h1 id="city">
+              Keighley
+            </h1> 
+            <h3 id="date"></h3>
+          </ul>
+        </div>
+        <div class="col-6">
+          <ul>
+            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" class="weather-icon" id="icon">
+          </ul>
+        </div>
+      </div>
     
-    <h3 id="date"></h3>
     <div class="row">
       <div class="col-6">
         <ul>
           <li>Humidity: <span id="humidity"></span>%</li>
           <li>Wind: <span id="wind"></span> km/h</li>
-        </li>
-      </ul>  
-        <ul>
-          <li>Highest: 11<span id="highest" id="celsius-link"></span>°C</li>
-          <li>Lowest: 5<span id="lowest" id="celsius-link"></span>°C</li>
           <li>Feels like: <span id="feels-like"></span>°C</li>
-        </ul>
-        <ul class="sunset">
-          Sunset: 16:54
-        </ul>
-        <ul class="sunrise">
-          Sunrise: 07:47
-        </ul>
+      </ul>
       </div>
+
         <div class="col-6">
-          <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png" class="cloud-icon" id="icon">
           <h2>
             <span class="temperature" id="temperature">8</span>
             <span class="units">
@@ -78,12 +78,11 @@
             </span>
           </h2>
           <h4 id="description">
-            Cloudy
+            
           </h4>
           <br>
         </div>
     </div>
-      <li>Rainy conditions expected around 17:00 <span class="conditions"></span></li>
       </div>
     </div>
 
