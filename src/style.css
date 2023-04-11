@@ -5,6 +5,7 @@ h1 {
 
 h2 {
   margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 h4 {
@@ -64,6 +65,14 @@ a {
   padding: 0px;
 }
 
+.temp-left {
+  padding-left: 45px;
+}
+
+.temp-right {
+  padding-left: 45px;
+}
+
 .sunset {
   margin-bottom: 0px;
 }
@@ -96,10 +105,12 @@ a {
 
 .top-info {
   margin-bottom: -10px;
+  padding-left: 45px;
 }
 
 .location-icon {
   font-size: 20px;
+  outline: 0px;
 }
 
 .temperature {
