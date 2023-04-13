@@ -23,10 +23,11 @@ ul {
 
 li {
   font-size: 20px;
-  font-weight: 100;
+  font-weight: 400;
   height: 20px;
   line-height: 3;
   list-style: none;
+  padding-top: 20px;
 }
 
 a {
@@ -51,7 +52,7 @@ a {
   padding: 20px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.873);
-  opacity: 0.85;
+  box-shadow: 1px 1px 10px 1px rgb(157, 155, 155);
   margin-top: 30px;
 }
 
@@ -131,7 +132,7 @@ a {
 
 .units {
   position: relative;
-  top: -34px;
+  top: -28px;
   text-decoration: none;
 }
 
@@ -164,6 +165,7 @@ a {
   padding-right: 70px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.873);
+  box-shadow: 1px 1px 10px 1px rgb(157, 155, 155);
   text-align: center;
 }
 
